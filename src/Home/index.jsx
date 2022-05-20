@@ -8,6 +8,7 @@ import Page2 from "./Page2";
 import Page3 from "./Page3";
 import Page4 from "./Page4";
 import Footer from "./Footer";
+import Contact from "./Contact";
 import "./static/style";
 
 let isMobile = false;
@@ -47,6 +48,7 @@ class Home extends React.PureComponent {
       <Page3 key="page3" isMobile={this.state.isMobile} />,
       <Page4 key="page4" />,
       <Footer key="footer" />,
+      <Contact key="contact" />,
       <DocumentTitle title="Seguimiento GPS" key="title" />,
     ];
   }
