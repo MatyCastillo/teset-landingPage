@@ -27,7 +27,6 @@ class Content7 extends React.Component {
     const { dataSource, isMobile } = props;
     delete props.dataSource;
     delete props.isMobile;
-    const ulChildren = this.getBlockChildren(dataSource.block.children);
     const queue = isMobile ? "bottom" : "left";
     const imgAnim = isMobile
       ? {
@@ -63,9 +62,7 @@ class Content7 extends React.Component {
               type={queue}
               ease="easeOutQuad"
               {...dataSource.block}
-            >
-              {ulChildren}
-            </QueueAnim>
+            ></QueueAnim>
           </QueueAnim>
           <TweenOne
             key="img"

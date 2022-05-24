@@ -1,5 +1,6 @@
-import 'react-github-button/assets/style.css';
-import './header.less';
-import './home.less';
-import './footer.less';
-import './responsive.less';
+import "react-github-button/assets/style.css";
+import "./header.less";
+import "./home.less";
+import "./footer.less";
+import "./responsive.less";
+import "./services.less";
