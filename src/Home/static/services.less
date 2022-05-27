@@ -1,15 +1,18 @@
-@content0: content0;
+@import './default.less';
+@services: services;
 
-.@{content0}-wrapper {
+.@{services}-wrapper {
   min-height: 446px;
   overflow: hidden;
 
-  .@{content0} {
+  .@{services} {
     height: 100%;
     padding: 64px 24px;
 
-    >.title-wrapper {
+    >.title-wrapper, >.title-wrapper p {
       margin: 0 auto 48px;
+      text-align: center;
+      color: @text-color;
     }
 
     &-block {
@@ -34,8 +37,8 @@
       }
 
       &-icon {
-        width: 100px;
-        height: 100px;
+        width: 200px;
+        height: 200px;
         margin: auto;
       }
 
@@ -49,7 +52,7 @@
 }
 
 @media screen and (max-width: 767px) {
-  .@{content0}-wrapper {
+  .@{services}-wrapper {
     min-height: 880px;
   }
 }

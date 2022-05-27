@@ -15,7 +15,7 @@ class Content extends React.PureComponent {
       childWrapper,
     } = dataSource;
     return (
-      <div className="templates-wrapper">
+      <div className="title-wrapper">
         <div {...props} {...wrapper}>
           <div {...page}>
             <div {...titleWrapper}>

@@ -10,7 +10,7 @@ import Page4 from "./Page4";
 import Services from "./Services";
 import Footer from "./Footer";
 import "./static/style";
-import { Content00DataSource } from "./data.source";
+import { ServicesDataSource } from "./data.source";
 
 let isMobile = false;
 enquireScreen((b) => {
@@ -45,9 +45,9 @@ class Home extends React.PureComponent {
       />,
       <Banner key="banner" onEnterChange={this.onEnterChange} />,
       <Services
-        id="Content0_0"
-        key="Content0_0"
-        dataSource={Content00DataSource}
+        id="services"
+        key="services"
+        dataSource={ServicesDataSource}
         isMobile={this.state.isMobile}
       />,
       <Page1 key="page1" isMobile={this.state.isMobile} />,
