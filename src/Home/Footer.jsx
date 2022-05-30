@@ -1,4 +1,5 @@
 import React from "react";
+import logosm from "../../public/img/fabicon.png";
 import { Row, Col } from "antd";
 
 function Footer() {
@@ -20,19 +21,6 @@ function Footer() {
               <div>
                 <a href="#">Ejemplo</a>
               </div>
-              <div>
-                <a href="#">Ejemplo</a>
-              </div>
-              <div>
-                <a target="_blank " href="#">
-                  Ejemplo
-                </a>
-              </div>
-              <div>
-                <a target="_blank " href="#">
-                  Ejemplo
-                </a>
-              </div>
             </div>
           </Col>
           <Col lg={6} sm={24} xs={24}>
@@ -49,19 +37,6 @@ function Footer() {
               <div>
                 <a href="#">Ejemplo</a>
               </div>
-              <div>
-                <a href="#">Ejemplo</a>
-              </div>
-              <div>
-                <a target="_blank " href="#">
-                  Ejemplo
-                </a>
-              </div>
-              <div>
-                <a target="_blank " href="#">
-                  Ejemplo
-                </a>
-              </div>
             </div>
           </Col>
           <Col lg={6} sm={24} xs={24}>
@@ -77,36 +52,16 @@ function Footer() {
               </div>
               <div>
                 <a href="#">Ejemplo</a>
-              </div>
-              <div>
-                <a href="#">Ejemplo</a>
-              </div>
-              <div>
-                <a target="_blank " href="#">
-                  Ejemplo
-                </a>
-              </div>
-              <div>
-                <a target="_blank " href="#">
-                  Ejemplo
-                </a>
               </div>
             </div>
           </Col>
           <Col lg={6} sm={24} xs={24}>
             <div className="footer-center">
               <h2>
-                <img
-                  className="title-icon"
-                  src="https://gw.alipayobjects.com/zos/rmsportal/nBVXkrFdWHxbZlmMbsaH.svg"
-                  alt=""
-                />
-                LOGO
+                <img className="title-icon" src={logosm} alt="" />
+                TESEG
               </h2>
-              <div>
-                Eficiencia y geolocalización de vehículos y pasajeros en una red
-                de transporte.
-              </div>
+              <div>Transporte Escolar • Servicios • Turismo</div>
             </div>
           </Col>
         </Row>

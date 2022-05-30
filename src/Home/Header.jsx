@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
+import logo from "../../public/img/logo.png";
 import { Menu, Row, Col, Icon, Button, Popover, Badge } from "antd";
 
 const searchEngine = "Google";
@@ -82,11 +83,7 @@ export default class Header extends React.Component {
         <Row>
           <Col lg={4} md={5} sm={24} xs={24}>
             <a id="logo">
-              <img
-                alt="logo"
-                src="https://t.alipayobjects.com/images/rmsweb/T1B9hfXcdvXXXXXXXX.svg"
-              />
-              <span>Bran&Logo</span>
+              <img alt="logo" src={logo} />
             </a>
           </Col>
           <Col lg={20} md={19} sm={0} xs={0}>
