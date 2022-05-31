@@ -4,6 +4,7 @@ import ScrollElement from "rc-scroll-anim/lib/ScrollElement";
 import GitHubButton from "react-github-button";
 import { Icon } from "antd";
 import QueueAnim from "rc-queue-anim";
+import logo from "../../public/img/logo.png";
 
 function typeFunc(a) {
   if (a.key === "line") {
@@ -26,9 +27,10 @@ export default function Banner({ onEnterChange }) {
         <QueueAnim
           className="banner-text-wrapper"
           type={typeFunc}
-          delay={300}
+          delay={500}
           key="banner"
         >
+          <img src={logo} alt="logo" />
           <h2 key="h2">SEGUIMIENTO GPS</h2>
           <p key="content">EFICIENCIA Y GEOLOCALIZACIÓN DE VEHÍCULOS</p>
           <span className="line" key="line" />

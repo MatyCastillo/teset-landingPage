@@ -11,6 +11,7 @@ import Services from "./Services";
 import Footer from "./Footer";
 import "./static/style";
 import { ServicesDataSource } from "./data.source";
+import { BackTop } from "antd";
 
 let isMobile = false;
 enquireScreen((b) => {
@@ -52,10 +53,10 @@ class Home extends React.PureComponent {
       />,
       <Page1 key="page1" isMobile={this.state.isMobile} />,
       <Page2 key="page2" />,
-      <Page3 key="page3" isMobile={this.state.isMobile} />,
       <Page4 key="page4" />,
       <Footer key="footer" />,
-      <DocumentTitle title="Seguimiento GPS" key="title" />,
+      <DocumentTitle title="TESET Transportes " key="title" />,
+      <BackTop />,
     ];
   }
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import { Button, Icon } from "antd";
 export const ServicesDataSource = {
   wrapper: { className: "home-page-wrapper services-wrapper" },
   page: { className: "home-page services" },
@@ -56,6 +57,14 @@ export const ServicesDataSource = {
                     su empresa, compatible con el ecosistema más completo de la
                     industria.
                   </p>
+                  <div key="button">
+                    <a>
+                      <Button type="primary" size="large">
+                        Ver Más
+                        <Icon type="right" />
+                      </Button>
+                    </a>
+                  </div>
                 </span>
               ),
             },
@@ -97,6 +106,14 @@ export const ServicesDataSource = {
                         presupuestos, órdenes de servicio, registro de talleres,
                         formularos de inspección, reportes y más.
                       </p>
+                      <div key="button">
+                        <a>
+                          <Button type="primary" size="large">
+                            Ver Más
+                            <Icon type="right" />
+                          </Button>
+                        </a>
+                      </div>
                     </span>
                   </span>
                 </span>
@@ -140,6 +157,14 @@ export const ServicesDataSource = {
                     de cada cliente o cada industria, disponible en Android y
                     iOS.
                   </p>
+                  <div key="button">
+                    <a>
+                      <Button type="primary" size="large">
+                        Ver Más
+                        <Icon type="right" />
+                      </Button>
+                    </a>
+                  </div>
                 </span>
               ),
             },

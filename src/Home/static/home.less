@@ -11,12 +11,12 @@
   top: 53%;
   color: #fff;
   text-align: right;
-  font-family: Lato, @font-family;
+  font-family: Raleway, @font-family;
 }
 .banner-text-wrapper h2 {
   font-size: 40px;
   font-weight: normal;
-  font-family: Lato, @font-family;
+  font-family: Raleway, @font-family;
   white-space: nowrap;
   color: rgb(44, 44, 44);
   margin-bottom: 8px;
@@ -80,6 +80,12 @@
   }
 }
 
+.banner-text-wrapper > img {
+  float: center;
+  text-align: left;
+  width: 200px;
+}
+
 .down {
   text-align: center;
   position: absolute;
@@ -136,13 +142,28 @@
 }
 
 .image1 {
-  background: url("https://t.alipayobjects.com/images/T1Ch8kXfpdXXXXXXXX.png") no-repeat right / 841px;
+  background: url("https://www.clarin.com/img/2021/10/18/una-flota-de-colectivos-renovada___WH3y5cBEE_720x0__1.jpg") no-repeat right / 841px,
+  -webkit-linear-gradient(
+    right,
+    rgb(255, 255, 255) 0%,
+    rgb(255, 255, 255) 1%,
+    rgba(0, 0, 0, 0) 35%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  background-blend-mode: color;
   height: 511px;
   top: 50%;
   margin-top: -256px;
 }
 .image2 {
-  background: url("https://t.alipayobjects.com/images/T1r5RkXotXXXXXXXXX.png") no-repeat left / 800px;
+  background: url("../../../public/img/movil.jpg") no-repeat left / 800px,
+  -webkit-linear-gradient(
+    left,
+    rgb(255, 255, 255) 0%,
+    rgb(255, 255, 255) 1%,
+    rgba(0, 0, 0, 0) 35%,
+    rgba(0, 0, 0, 0) 100%
+  );
   height: 474px;
   top: 50%;
   margin-top: -266px;
@@ -171,7 +192,14 @@
   line-height: 28px;
   color: #999;
 }
-
+.contact-input .ant-input{
+  margin: 0 8px 8px 0;
+}
+.ant-back-top {
+  bottom: 100px;
+  background-color: #ff4802;
+  border-radius: 100%;
+}
 @keyframes upDownMove {
   to {
     transform: translateY(10px);

@@ -2,7 +2,9 @@ import React from "react";
 import TweenOne from "rc-tween-one";
 import ScrollOverPack from "rc-scroll-anim/lib/ScrollOverPack";
 import QueueAnim from "rc-queue-anim";
-import { Icon, Button } from "antd";
+import { Icon, Button, Input, Col } from "antd";
+const InputGroup = Input.Group;
+const { TextArea } = Input;
 
 export default function Page4() {
   return (
@@ -18,10 +20,33 @@ export default function Page4() {
           Si tenés alguna pregunta o querés saber más sobre nuestra tecnología
           ¡No dudes en contactarnos!
         </p>
+        <InputGroup className="contact-input" compact>
+          <Col span={4}>
+            <Input placeholder="Nombre" />
+          </Col>
+          <Col span={4}>
+            <Input placeholder="Apellido" />
+          </Col>
+          <br />
+          <Col span={8}>
+            <Input placeholder="Email" />
+          </Col>
+          <br />
+          <Col span={4}>
+            <Input placeholder="Compañia" />
+          </Col>
+          <Col span={4}>
+            <Input placeholder="Telefono" />
+          </Col>
+          <br />
+          <Col span={8}>
+            <TextArea rows={4} placeholder="Escriba su consulta aquí" />
+          </Col>
+        </InputGroup>
         <div key="button">
           <a>
             <Button type="primary" size="large">
-              Contactar
+              Enviar
               <Icon type="right" />
             </Button>
           </a>

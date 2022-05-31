@@ -59,7 +59,7 @@ function Footer() {
             <div className="footer-center">
               <h2>
                 <img className="title-icon" src={logosm} alt="" />
-                TESEG
+                TESET
               </h2>
               <div>Transporte Escolar • Servicios • Turismo</div>
             </div>
@@ -78,12 +78,12 @@ function Footer() {
             }}
           >
             <a href="#" rel="noopener noreferrer" target="_blank">
-              Brand
+              TESET
             </a>
           </span>
           <span style={{ marginRight: 24 }}>
             <a href="#" rel="noopener noreferrer" target="_blank">
-              Seguimiento GPS
+              Transporte Escolar • Servicios • Turismo
             </a>
           </span>
           {/*<span style={{ marginRight: 12 }}>ICP 证浙 B2-2-100257</span>*/}
