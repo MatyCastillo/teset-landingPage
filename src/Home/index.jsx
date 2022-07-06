@@ -9,6 +9,7 @@ import Page3 from "./Page3";
 import Page4 from "./Page4";
 import Services from "./Services";
 import Footer from "./Footer";
+import WhatsAppButton from "./WhatsAppButton";
 import "./static/style";
 import { ServicesDataSource } from "./data.source";
 import { BackTop } from "antd";
@@ -43,6 +44,7 @@ class Home extends React.PureComponent {
         key="header"
         isFirstScreen={this.state.isFirstScreen}
         isMobile={this.state.isMobile}
+        dataSource={ServicesDataSource}
       />,
       <Banner key="banner" onEnterChange={this.onEnterChange} />,
       <Services
@@ -56,7 +58,7 @@ class Home extends React.PureComponent {
       <Page4 key="page4" />,
       <Footer key="footer" />,
       <DocumentTitle title="TESET Transportes " key="title" />,
-      <BackTop />,
+      // <WhatsAppButton key="whatsapp-button" />,
     ];
   }
 }

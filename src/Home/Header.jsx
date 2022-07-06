@@ -40,9 +40,16 @@ export default class Header extends React.Component {
   };
 
   render() {
-    const { isFirstScreen, isMoblie } = this.props;
+    const { dataSource, isFirstScreen, isMoblie } = this.props;
     const { menuVisible } = this.state;
     const menuMode = isMoblie ? "inline" : "horizontal";
+    const {
+      wrapper,
+      titleWrapper,
+      page,
+      OverPack: overPackData,
+      childWrapper,
+    } = dataSource;
     const headerClassName = classNames({
       clearfix: true,
       "home-nav-white": !isFirstScreen,
@@ -52,15 +59,15 @@ export default class Header extends React.Component {
       <Menu mode={menuMode} defaultSelectedKeys={["home"]} id="nav" key="nav">
         <Menu.Item key="home">Inicio</Menu.Item>
         <Menu.Item key="docs/spec">Qué hacemos</Menu.Item>
-        <Menu.SubMenu title="Servicios">
-          <Menu.Item>Seguimiento GPS</Menu.Item>
-          <Menu.Item>APP GPS</Menu.Item>
+        <Menu.SubMenu key="services" title="Servicios">
+          {childWrapper.children.map((element) => (
+            <Menu.Item key={element.name}>{element.name}</Menu.Item>
+          ))}
         </Menu.SubMenu>
         <Menu.Item key="docs/pattern">Nosotros</Menu.Item>
         <Menu.Item key="docs/resource">Contacto</Menu.Item>
       </Menu>,
     ];
-
     return (
       <header id="header" className={headerClassName}>
         {menuMode === "inline" ? (

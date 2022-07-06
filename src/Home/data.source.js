@@ -21,7 +21,7 @@ export const ServicesDataSource = {
     className: "services-block-wrapper",
     children: [
       {
-        name: "block0",
+        name: "Plataforma de rastreo GPS",
         className: "services-block",
         md: 8,
         xs: 24,
@@ -72,7 +72,7 @@ export const ServicesDataSource = {
         },
       },
       {
-        name: "block1",
+        name: "Mantenimiento de flotas",
         className: "services-block",
         md: 8,
         xs: 24,
@@ -123,7 +123,7 @@ export const ServicesDataSource = {
         },
       },
       {
-        name: "block2",
+        name: "Seguimiento de smartphones",
         className: "services-block",
         md: 8,
         xs: 24,

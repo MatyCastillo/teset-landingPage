@@ -15,6 +15,11 @@ function typeFunc(a) {
   return "left";
 }
 
+console.log;
+const scrollToTop = () => {
+  window.scrollTo({ top: 474, behavior: "smooth" });
+};
+
 export default function Banner({ onEnterChange }) {
   return (
     <section className="page banner-wrapper">
@@ -39,7 +44,7 @@ export default function Banner({ onEnterChange }) {
             <a>Contactar</a>
           </div>
         </QueueAnim>
-        <Icon type="down" className="down" />
+        <Icon type="down" className="down" onClick={scrollToTop} />
       </ScrollElement>
     </section>
   );

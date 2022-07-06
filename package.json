@@ -4,6 +4,7 @@
     "index": "./index.js"
   },
   "dependencies": {
+    "@typopro/dtp-sinkin-sans": "^3.7.5",
     "antd": "^3.0.0",
     "classnames": "^2.2.5",
     "enquire-js": "^0.1.0",
@@ -15,7 +16,8 @@
     "react": "^16.1.1",
     "react-document-title": "^2.0.3",
     "react-dom": "^16.1.1",
-    "react-github-button": "^0.1.11"
+    "react-github-button": "^0.1.11",
+    "typopro-web": "^4.2.6"
   },
   "devDependencies": {
     "atool-build": "^1.0.2",

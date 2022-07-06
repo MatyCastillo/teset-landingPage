@@ -7,8 +7,8 @@
 }
 .banner-text-wrapper {
   position: absolute;
-  left: 13%;
-  top: 53%;
+  left: 10%;
+  top: 40%;
   color: #fff;
   text-align: right;
   font-family: Raleway, @font-family;
@@ -28,9 +28,9 @@
 }
 .banner-text-wrapper .line {
   width: 0.8px;
-  height: 76px;
+  height: 150px;
   position: absolute;
-  background: rgba(44, 44, 44, .44);
+  background: @color;
   background-image: -webkit-linear-gradient(top, rgba(44, 44, 44, 0.03), rgba(44, 44, 44, 0.6), rgba(44, 44, 44, 0.03));
   background-image: -moz-linear-gradient(top, rgba(44, 44, 44, 0.03), rgba(44, 44, 44, 0.6), rgba(44, 44, 44, 0.03));
   background-image: -ms-linear-gradient(top, rgba(44, 44, 44, 0.03), rgba(44, 44, 44, 0.6), rgba(44, 44, 44, 0.03));
@@ -56,7 +56,7 @@
     border-radius: @border-radius-base;
     border: 1px solid @start-button-color;
     text-decoration: none;
-    color: #ff4802;
+    color: @color;
     font-size: 15px;
     background: transparent;
     transition: all .45s;
@@ -194,11 +194,6 @@
 }
 .contact-input .ant-input{
   margin: 0 8px 8px 0;
-}
-.ant-back-top {
-  bottom: 100px;
-  background-color: #ff4802;
-  border-radius: 100%;
 }
 @keyframes upDownMove {
   to {
