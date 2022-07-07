@@ -1,4 +1,6 @@
 @import "~antd/lib/style/themes/default.less";
+@import "~antd/lib/menu/style/index.css";
+
 @border-color: rgba(229, 231, 235, 100);
 @padding-space: 144px;
 @site-text-color: #314659;
@@ -8,3 +10,24 @@
 @primary-color: #E74410;
 @info-color: #E74410;
 @processing-color: #E74410;
+
+.ant-menu-horizontal > .ant-menu-item:hover,
+.ant-menu-horizontal > .ant-menu-submenu:hover,
+.ant-menu-horizontal > .ant-menu-item-active,
+.ant-menu-horizontal > .ant-menu-submenu-active,
+.ant-menu-horizontal > .ant-menu-item-open,
+.ant-menu-horizontal > .ant-menu-submenu-open,
+.ant-menu-horizontal > .ant-menu-item-selected,
+.ant-menu-horizontal > .ant-menu-submenu-selected {
+  color: #E74410;
+  border-bottom: 2px solid #E74410;
+}
+
+.ant-btn-primary {
+    color: #fff;
+    background-color: #E74410;
+    border-color: #E74410;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
+    -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
+            box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
+  }
