@@ -1,9 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
-import logo from "../../public/img/logo.png";
+import logo from "../../public/img/teset-logo.png";
 import { Menu, Row, Col, Icon, Button, Popover, Badge } from "antd";
+import ScrollAnim from "rc-scroll-anim";
 
+var Link = ScrollAnim.Link;
 const searchEngine = "Google";
 
 export default class Header extends React.Component {
@@ -57,7 +59,9 @@ export default class Header extends React.Component {
 
     const menu = [
       <Menu mode={menuMode} defaultSelectedKeys={["home"]} id="nav" key="nav">
-        <Menu.Item key="home">Inicio</Menu.Item>
+        <Menu.Item key="home">
+          <Link to="banner">Inicio</Link>
+        </Menu.Item>
         <Menu.Item key="docs/spec">Qué hacemos</Menu.Item>
         <Menu.SubMenu key="services" title="Servicios">
           {childWrapper.children.map((element) => (
@@ -65,7 +69,9 @@ export default class Header extends React.Component {
           ))}
         </Menu.SubMenu>
         <Menu.Item key="docs/pattern">Nosotros</Menu.Item>
-        <Menu.Item key="docs/resource">Contacto</Menu.Item>
+        <Menu.Item key="docs/resource">
+          <Link to="contact">Contacto</Link>
+        </Menu.Item>
       </Menu>,
     ];
     return (
@@ -89,9 +95,9 @@ export default class Header extends React.Component {
         ) : null}
         <Row>
           <Col lg={4} md={5} sm={24} xs={24}>
-            <a id="logo">
+            <Link id="logo" to="banner">
               <img alt="logo" src={logo} />
-            </a>
+            </Link>
           </Col>
           <Col lg={20} md={19} sm={0} xs={0}>
             {menuMode === "horizontal" ? menu : null}

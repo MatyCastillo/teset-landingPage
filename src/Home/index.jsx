@@ -6,7 +6,7 @@ import Banner from "./Banner";
 import Page1 from "./Page1";
 import Page2 from "./Page2";
 import Page3 from "./Page3";
-import Page4 from "./Page4";
+import Contact from "./Contact";
 import Services from "./Services";
 import Footer from "./Footer";
 import WhatsAppButton from "./WhatsAppButton";
@@ -42,6 +42,7 @@ class Home extends React.PureComponent {
     return [
       <Header
         key="header"
+        id="header"
         isFirstScreen={this.state.isFirstScreen}
         isMobile={this.state.isMobile}
         dataSource={ServicesDataSource}
@@ -55,10 +56,10 @@ class Home extends React.PureComponent {
       />,
       <Page1 key="page1" isMobile={this.state.isMobile} />,
       <Page2 key="page2" />,
-      <Page4 key="page4" />,
+      <Contact key="contact" />,
       <Footer key="footer" />,
-      <DocumentTitle title="TESET Transportes " key="title" />,
-      // <WhatsAppButton key="whatsapp-button" />,
+      <WhatsAppButton key="whatsapp-button" />,
+      <DocumentTitle title="TESETGPS" key="title" />,
     ];
   }
 }

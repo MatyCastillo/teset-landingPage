@@ -1,82 +1,70 @@
 import React from "react";
 import TweenOne from "rc-tween-one";
-import { Row, Col } from "antd";
+import ScrollOverPack from "rc-scroll-anim/lib/ScrollOverPack";
 import QueueAnim from "rc-queue-anim";
-import OverPack from "rc-scroll-anim/lib/ScrollOverPack";
-import { getChildrenToRender } from "./utils";
+import { Icon, Button, Input, Col } from "antd";
+const InputGroup = Input.Group;
+const { TextArea } = Input;
 
-class Content7 extends React.Component {
-  getBlockChildren = (data) =>
-    data.map(($item) => {
-      const { ...item } = $item;
-      const { title, img, content } = item;
-      ["title", "img", "content"].forEach((key) => delete item[key]);
-      return (
-        <li key={item.name} {...item}>
-          <span {...img}>
-            <img src={img.children} width="100%" alt="img" />
-          </span>
-          <h2 {...title}>{title.children}</h2>
-          <div {...content}>{content.children}</div>
-        </li>
-      );
-    });
+export default function Contact() {
+  return (
+    <ScrollOverPack id="contact" className="content-wrapper page">
+      <QueueAnim
+        className="text-wrapper-bottom"
+        key="text"
+        leaveReverse
+        type="bottom"
+      >
+        <h2 key="h2">TENÉS DUDAS? NOSOTROS LAS RESOLVEMOS</h2>
+        <p key="p">
+          Si tenés alguna pregunta o querés saber más sobre nuestra tecnología
+          ¡No dudes en contactarnos!
+        </p>
+        <InputGroup className="contact-input" compact>
+          <Col span={4}>
+            <Input placeholder="Nombre" />
+          </Col>
+          <Col span={4}>
+            <Input placeholder="Apellido" />
+          </Col>
+          <br />
+          <Col span={8}>
+            <Input placeholder="Email" />
+          </Col>
+          <br />
+          <Col span={4}>
+            <Input placeholder="Compañia" />
+          </Col>
+          <Col span={4}>
+            <Input placeholder="Telefono" />
+          </Col>
+          <br />
+          <Col span={8}>
+            <TextArea rows={4} placeholder="Escriba su consulta aquí" />
+          </Col>
+        </InputGroup>
+        <div key="button">
+          <a>
+            <Button type="primary" size="large">
+              Enviar
+              <Icon type="right" />
+            </Button>
+          </a>
+        </div>
+      </QueueAnim>
 
-  render() {
-    const { ...props } = this.props;
-    const { dataSource, isMobile } = props;
-    delete props.dataSource;
-    delete props.isMobile;
-    const queue = isMobile ? "bottom" : "left";
-    const imgAnim = isMobile
-      ? {
-          y: 30,
-          opacity: 0,
-          delay: 600,
-          type: "from",
+      <TweenOne
+        key="image"
+        className="image4 bottom-wrapper"
+        animation={{
+          y: 0,
+          opacity: 1,
+          duration: 550,
+          delay: 150,
           ease: "easeOutQuad",
-        }
-      : {
-          x: 30,
-          opacity: 0,
-          type: "from",
-          ease: "easeOutQuad",
-        };
-    return (
-      <div {...props} {...dataSource.wrapper}>
-        <OverPack {...dataSource.OverPack} component={Row}>
-          <QueueAnim
-            key="text"
-            type={queue}
-            leaveReverse
-            ease={["easeOutQuad", "easeInQuad"]}
-            {...dataSource.textWrapper}
-            component={Col}
-          >
-            <div key="title" {...dataSource.titleWrapper}>
-              {dataSource.titleWrapper.children.map(getChildrenToRender)}
-            </div>
-            <QueueAnim
-              component="ul"
-              key="ul"
-              type={queue}
-              ease="easeOutQuad"
-              {...dataSource.block}
-            ></QueueAnim>
-          </QueueAnim>
-          <TweenOne
-            key="img"
-            animation={imgAnim}
-            resetStyle
-            {...dataSource.img}
-            component={Col}
-          >
-            <img src={dataSource.img.children} width="100%" alt="img" />
-          </TweenOne>
-        </OverPack>
-      </div>
-    );
-  }
+        }}
+        style={{ transform: "translateY(50px)", opacity: 0 }}
+      />
+    </ScrollOverPack>
+  );
 }
-
-export default Content7;

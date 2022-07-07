@@ -1,10 +1,10 @@
 import React from "react";
-import logosm from "../../public/img/fabicon.png";
+import logosm from "../../public/img/logo-2.png";
 import { Row, Col } from "antd";
 
 function Footer() {
   return (
-    <footer id="footer" className="dark">
+    <footer id="footer" className="orange">
       <div className="footer-wrap">
         <Row>
           <Col lg={6} sm={24} xs={24}>

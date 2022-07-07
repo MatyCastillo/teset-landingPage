@@ -4,7 +4,8 @@ import ScrollElement from "rc-scroll-anim/lib/ScrollElement";
 import GitHubButton from "react-github-button";
 import { Icon } from "antd";
 import QueueAnim from "rc-queue-anim";
-import logo from "../../public/img/logo.png";
+import logo from "../../public/img/teset-logo.png";
+import { Link } from "rc-scroll-anim";
 
 function typeFunc(a) {
   if (a.key === "line") {
@@ -14,11 +15,6 @@ function typeFunc(a) {
   }
   return "left";
 }
-
-console.log;
-const scrollToTop = () => {
-  window.scrollTo({ top: 474, behavior: "smooth" });
-};
 
 export default function Banner({ onEnterChange }) {
   return (
@@ -41,10 +37,18 @@ export default function Banner({ onEnterChange }) {
           <span className="line" key="line" />
           <div key="button1" className="start-button clearfix">
             <a>Ver Más</a>
-            <a>Contactar</a>
+            <a>
+              <Link to="contact">Contactar</Link>
+            </a>
           </div>
         </QueueAnim>
-        <Icon type="down" className="down" onClick={scrollToTop} />
+        <Link
+          to="services"
+          component={Icon}
+          type="down"
+          className="down"
+          style={{ fontSize: "32px" }}
+        ></Link>
       </ScrollElement>
     </section>
   );

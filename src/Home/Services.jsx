@@ -15,7 +15,7 @@ class Services extends React.PureComponent {
       childWrapper,
     } = dataSource;
     return (
-      <div className="title-wrapper">
+      <div className="title-wrapper" id="services">
         <div {...props} {...wrapper}>
           <div {...page}>
             <div {...titleWrapper}>
