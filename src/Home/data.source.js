@@ -11,7 +11,7 @@ export const ServicesDataSource = {
         name: "title",
         children: (
           <span>
-            <p>Servicios</p>
+            <h2>Servicios</h2>
           </span>
         ),
       },
