@@ -54,8 +54,6 @@ class Home extends React.PureComponent {
         dataSource={ServicesDataSource}
         isMobile={this.state.isMobile}
       />,
-      <Page1 key="page1" isMobile={this.state.isMobile} />,
-      <Page2 key="page2" />,
       <Contact key="contact" />,
       <Footer key="footer" />,
       <WhatsAppButton key="whatsapp-button" />,

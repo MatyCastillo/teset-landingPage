@@ -49,6 +49,7 @@ export const ServicesDataSource = {
             },
             {
               name: "content",
+              className: "services-block-content",
               children: (
                 <span>
                   <p>
@@ -96,6 +97,7 @@ export const ServicesDataSource = {
             },
             {
               name: "content",
+              className: "services-block-content",
               children: (
                 <span>
                   <span>
@@ -147,6 +149,7 @@ export const ServicesDataSource = {
             },
             {
               name: "content",
+              className: "services-block-content",
               children: (
                 <span>
                   <p>
